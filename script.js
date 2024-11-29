@@ -1,5 +1,3 @@
-
-
 const button = document.getElementById("addProductBtn");
 const tableData = document.getElementById("productTable");
 const total = document.getElementById("totalAmount");
@@ -22,10 +20,12 @@ button.addEventListener("click", () => {
   document.getElementById("productPrice").value = "";
 
   // Update total amount and GST
+  // totalAmount += productPrice;
+  // const withGst = productPrice * 0.18;
   totalAmount += productPrice;
-  const withGst = productPrice * 0.18;
+  const withGst = totalAmount * 0.18;
+  
   const g = withGst + totalAmount;
-  document.getElementById("grandTotal").innerText = 
   // grandTotal.textContent = g;
 
   console.log("grand", g);
